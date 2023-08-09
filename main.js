@@ -25,9 +25,21 @@ document.getElementById('search-btn').addEventListener("click",function(e){
 			div.innerHTML = "";
 			addhtml = "";
 			for(var i = 0;i<res2.length;i++){
-				addhtml = addhtml + '<div class="col-lg-3"><div class="card-header"><h2>Category:'+ res2[i].Category+'</h2></div><div class="card-body"><p>Difficulty : '+ res2[i].Difficulty+'</p> <p>Force : '+ res2[i].Force+'</p> <p>Details : '+ res2[i].details+'</p> <p>exercise_name : '+ res2[i].exercise_name+'</p> <p>steps : '+ res2[i].steps+'</p> <video  width="320" height="240" src=' + res2[i].videoURL + ' controls autoplay></video></div></div>'
-			}
-			
+				addhtml += '<div class="col-lg-1 border rounded p-3" style="border: 10px>' +
+                           '<div class="card-header"><h2>' + res2[i].exercise_name + '</h2></div>' +
+                           '<div class="card-body">' +
+                           '<p>Muscle: ' + res2[i].target.Primary + '</p>' +
+                           '<p>Difficulty: ' + res2[i].Difficulty + '</p>' +
+                           '<p>Force: ' + res2[i].Force + '</p>' +
+                           '<p>Details: ' + res2[i].details + '</p>' +
+                           '<p>Steps:</p>' +  
+                           '<ol>';  for (var stepIdx = 0; stepIdx < res2[i].steps.length; stepIdx++) {
+                   				 addhtml += '<li>' + res2[i].steps[stepIdx] + '</li>';}
+							addhtml += '</ol>';  
+							addhtml += '<video width="320" height="240" src=' + res2[i].videoURL + ' controls ></video>' +
+                           '</div></div>';
+            }
+            
 			div.innerHTML = addhtml;
 		}else{
 			alert("exercise not found");
