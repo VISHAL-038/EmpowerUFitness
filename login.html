@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #login-section{
+        padding: 2rem;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+    #login-section h2 {
+            margin-bottom: 1rem;
+    }
+    #login-form {
+            max-width: 500px;
+            margin: 0 auto;
+    }
+    #login-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        #login-form input,
+        #login-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #login-form textarea {
+            resize: vertical;
+        }
+
+        #login-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #login-form button:hover {
+            background-color: #555;}
+    
+    </style>
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+        <h1>EmpowerUFitness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Exercises</a></li>
+                <li><a href="workout.html">Workout Plans</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="email">email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <button type="button" id="loginButton">Login</button>
+           
+            <p id="messages"></p>
+            <a href="./signup.html">Create new account?</a>
+        </form>
+    </section>
+
+
+        <footer>
+        <h1>EmpowerUFitness</h1>
+        
+        <section>
+            <h2>Follow Us</h2>
+            <p>Stay connected with us on social media for daily fitness tips, success stories, and more!</p>
+            <ol style="display:flex; justify-content: space-between;" class="list-unstyled list-inline" >
+                <li>
+                    <a href = "#" class = "flex ">
+                        <i class = "fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#" class = "flex">
+                        <i class = "fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#" class = "flex">
+                        <i class = "fab fa-instagram"></i>
+                    </a>
+                </li>
+               
+            </ol>
+        </section>
+    
+    <script src="./login.js"></script>
+    </footer> 
+</body>
+</html>

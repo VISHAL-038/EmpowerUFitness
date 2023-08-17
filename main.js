@@ -1,3 +1,9 @@
+// document.getElementById('lclvariable').innerHTML=
+// console.log("-----",localStorage.getItem('myvariable'));
+v=window.localStorage.getItem('myemail')
+console.log("===",v);
+document.getElementById('my-email').innerHTML=v
+
 const xhr = new XMLHttpRequest();
 var res;
 xhr.open('GET', 'https://exercisedb.p.rapidapi.com/exercises');
